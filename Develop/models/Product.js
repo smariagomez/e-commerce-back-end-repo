@@ -8,12 +8,13 @@ class Product extends Model {}
 
 // set up fields and rules for Product model
 //define columns
-Product.init({
+Product.init(
+  {
   id:{
     type: DataTypes.INTEGER,
     allowNull: false,
+    primaryKey:true,
     autoIncrement: true,
-    primaryKey:true
   },
   product_name: {
     type: DataTypes.STRING,
@@ -26,6 +27,7 @@ price:{
     isDecimal:true,
   }
   },
+  //how to set a default value of 10
  stock:{
     type: DataTypes.INTEGER,
     allowNull:false,

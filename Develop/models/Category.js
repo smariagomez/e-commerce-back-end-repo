@@ -4,19 +4,20 @@ const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
 
-Category.init({
+Category.init(
+  {
   // define columns
   id:{
     type: DataTypes.INTEGER,
     allowNull: false,
+    primaryKey:true,
     autoIncrement: true,
-    primaryKey:true
   },
   category_name:{
     type: DataTypes.STRING,
     allowNull: false,
   },
-  //how to insert products key?
+  //how to insert/nest product key? hasMany?
 },{
     sequelize,
     timestamps: false,
