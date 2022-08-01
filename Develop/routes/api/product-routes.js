@@ -10,12 +10,15 @@ router.get('/', async (req, res) => {
   try {
     const productData = await
     Product.findAll({
-      include: [{model: Tag, Category}],
+      include: [{model: Tag},{model: Category}],
     });
     res.status(200).json
     (productData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({
+      msg:"internal server error",
+      err
+    })
   }
 });
 
@@ -27,7 +30,7 @@ router.get('/:id', async (req, res) => {
     const productData = await
     Product.findByPk(req.params.id,
       {
-        include: [{model: Category, Tag }],
+        include: [{model: Category},{model: Tag }],
       });
 
       if (!productData) {
@@ -44,7 +47,25 @@ router.get('/:id', async (req, res) => {
 });
 
 // create new product
-router.post('/', (req, res) => {
+ router.post('/', async (req, res) => {
+//   try{
+//     const newProduct = await Product.create({
+//       product_name:req.body.product_name,
+//       price:req.body.price,
+//       stock:req.body.stock,
+//       //unclear if this should empty
+//       tagIds:req.body.tagIds,
+//     })
+//     res.status(201).json(newProduct)
+//   }catch(err){
+//       console.log(err)
+//       res.status(500).json({
+//         msg:"internal server error",
+//         err
+//       })
+//     }
+    
+
   /* req.body should look like this...
     {
       product_name: "Basketball",
