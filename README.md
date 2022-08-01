@@ -16,15 +16,15 @@
   Clone e-commerce-back-end-repo from GitHub https://github.com/smariagomez/e-commerce-back-end-repo and then open that repo in your code editor (e.g., VS Code).
   
   ## Usage
-  Once the repo has been opened in the your code editor you will run "mysql -u root" and "SOURCE schema.sql;" in the command line, then "exit." After these step have been completed you will run "npm run seed" in the command line followed by "npm start." Create, Read, Update and Delete methods can then be completed in the command line. The involved API pathways have been verified using Insomnia.
+  Once the repo has been opened in the your code editor you will run "mysql -u root" and "SOURCE schema.sql;" in the command line, then "exit." After these step have been completed you will run "npm run seed" in the command line followed by "npm start." Create, Read, Update and Delete methods can then be completed with the inventory organized by category, product and tags. The involved API pathways have been verified using Insomnia.
 
   <img src="./Assets/Screenshot1.jpg">
    <img src="./Assets/Screenshot2.jpg">
 
-  Walkthrough video tutorial, including Jest testing: 
+  Walkthrough video tutorial: https://drive.google.com/file/d/1GlNd1j6hlgeqwT7hQxnVHX0H2Dda7zYh/view 
       
   ## Credits
- Express.js, npm (MySQL), Node.js (Sequelize), Insomnia (https://insomnia.rest/), GitHub
+ Express.js, npm (MySQL), Node.js (Sequelize), Insomnia (https://insomnia.rest/), GitHub. Screencastify utilized for walkthrough tutorial.
   
   ## Contributing
    Please review the [Contributor Covenant](https://www.contributor-covenant.org/) for guidlines on how to contribute to this application.
